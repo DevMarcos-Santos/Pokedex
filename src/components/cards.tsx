@@ -31,6 +31,7 @@ export const Cards = ({ Data }: Props) => {
           <ActionAreaCard
             name={item.name}
             imageUrl={item.sprites['front_default']}
+            base_experience={item.base_experience}
           />
         </div>
       ))}

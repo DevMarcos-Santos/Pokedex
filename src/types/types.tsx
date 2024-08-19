@@ -11,6 +11,7 @@ export type Pokemons = {
   id: number;
   name: string;
   sprites: sprites;
+  base_experience: number;
 };
 
 export type PokemonsUrl = {

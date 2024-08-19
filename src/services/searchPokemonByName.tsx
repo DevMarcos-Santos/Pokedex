@@ -11,6 +11,7 @@ export const searchPokemonByName = async (name: string) => {
       result.id,
       result.name,
       result.sprites['front_default'],
+      result.base_experience,
     ];
     return pokemon;
   } catch (error) {

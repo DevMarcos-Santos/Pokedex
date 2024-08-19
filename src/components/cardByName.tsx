@@ -3,13 +3,19 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Graphic from './graphic';
 
 interface PokeProps {
   name: string;
   imageUrl: string;
+  base_experience: number;
 }
 
-export default function CardByName({ name, imageUrl }: PokeProps) {
+export default function CardByName({
+  name,
+  imageUrl,
+  base_experience,
+}: PokeProps) {
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
@@ -22,7 +28,18 @@ export default function CardByName({ name, imageUrl }: PokeProps) {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {name}
+              <>
+                <Graphic base_experience={base_experience} />
+                <div
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <p>{name}</p>
+                </div>
+              </>
             </Typography>
           </CardContent>
         </CardActionArea>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import ActionAreaCard from './card';
 import CardByName from './cardByName';
 
 interface Props {
@@ -39,7 +38,11 @@ export const CardsByName = ({ Data }: Props) => {
         </div>
       ) : (
         <div key={pokeData[0]} className="card">
-          <CardByName name={pokeData[1]} imageUrl={pokeData[2]} />
+          <CardByName
+            base_experience={parseInt(pokeData[3])}
+            name={pokeData[1]}
+            imageUrl={pokeData[2]}
+          />
         </div>
       )}
     </div>
