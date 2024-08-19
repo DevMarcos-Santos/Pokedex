@@ -3,7 +3,7 @@ import axios from 'axios';
 export const searchPokemon = async () => {
   try {
     const response = await axios.get(
-      `https://pokeapi.co/api/v2/pokemon?limit=50`
+      `https://pokeapi.co/api/v2/pokemon?limit=400`
     );
     const result = response.data.results;
     let urls: string[] = [];

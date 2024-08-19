@@ -15,7 +15,7 @@ export const Cards = ({ Data }: Props) => {
     let i = -1;
     Data.forEach(() => {
       i = i + 1;
-      if (i <= 50) {
+      if (i <= 400) {
         const promise = getPokemon(Data[i]);
         promise.then((response) => {
           setPokeData((prevItems) => [...prevItems, response]);
